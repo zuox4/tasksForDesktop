@@ -1,15 +1,33 @@
-import { useState } from 'react'
+import { use, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Counter } from './Counter'
+import Login from './pages/Login'
+import { useSelector } from 'react-redux'
+import { Link, Navigate, Outlet } from 'react-router'
+import { Route, Routes, BrowserRouter } from "react-router-dom"
+
+import { Home } from './pages/Home'
+import { Shop } from './pages/Shop'
+import { NavBar } from './components/NavBar'
+import { Header } from './components/Header'
+import { MainLayer } from './components/MainLayer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const {user} = useSelector(state=>state.auth)
   return (
-    <Counter/>
-  )
-}
+    <Routes>
+      <Route path='/' element={user?<MainLayer/>:<Navigate to={'/login'}/>}>
+        <Route path="/home" index element={user?<Home />:<Navigate to={'/login'}/>}/>
+        <Route path='/shop' element={user?<Shop/>:<Login/>}/>
+        <Route path='/calendar' element={user?<Shop/>:<Login/>}/>
+        <Route path='/*' element={<div>Страница не найдена</div>}/>  
+      </Route>
+      <Route path='/login' element={!user?<Login/>:<div>Уже авторизован</div>}/>
+
+    </Routes>
+
+  );
+};
 
 export default App
