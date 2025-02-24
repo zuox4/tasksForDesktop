@@ -1,5 +1,5 @@
 import { InputFilter } from "../components/InputFilter"
-import { ShopDashboard } from "../components/ShopDashboard"
+import { ShopDashboard } from "../components/Shop/ShopDashboard"
 
 export const Shop = () =>{
     return(

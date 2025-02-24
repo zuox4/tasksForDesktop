@@ -20,7 +20,8 @@ export const MainLayer =()=>{
             <div  style={{display:'flex', flexDirection:'row', marginTop:'20px', justifyContent:'space-between'}}>
             <NavBar/>
 
-            <div className={'page-content'} style={{}}>
+            <div className={'page-content'} style={{width: '75%'}}>
+            
                 <Outlet/>
             </div>
            
