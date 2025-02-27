@@ -10,6 +10,7 @@ export const NavBar = () =>{
 
     return(
         <div className="nav-bar" style={{background:'white', width:'min-content', display:'flex', flexDirection:'column', alignItems:'center'}}>
+            
             <NavBarButton path={'/home'} name={'Главная'} icon={homeIcon}/>
             <NavBarButton path={'/tasks'} name={'Задания'} icon={tasksIcon}/>
             <NavBarButton path={'/shop'} name={'Магазин'} icon={shopIcon}/>

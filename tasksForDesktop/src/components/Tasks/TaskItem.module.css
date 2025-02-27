@@ -1,0 +1,30 @@
+.taskitemconteiner{
+    
+    width: 100%;
+    border: solid 1px gray;
+
+
+    border-radius: 10px;
+}
+.hashtagsconteiner{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: 400;
+    color: gray;
+    width: fit-content;
+}
+.AdditionalInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mainInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.mainInfo>h3{
+    text-align: left;
+}

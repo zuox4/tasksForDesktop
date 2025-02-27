@@ -1,8 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../features/auth/authSlice";
 import exitIcon from '../assets/exit.svg';
+import logoutIcon from '../assets/logoutIcon.svg'
 import logoApp from '../assets/logoApp.svg';
-
+import {NavBarLk} from './NavBarLk'
+import { Logout } from "./Logout";
+import { Balance } from "./Balance";
 // Выносим стили в отдельный объект
 const styles = {
   header: {
@@ -26,30 +29,33 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     gap: '12px',
+    fontSize:'16px',
+    fontWeight: '600',
     alignItems: 'center',
   },
   avatar: {
     height: '40px',
     width: '40px',
     borderRadius: '50%',
-    background: 'yellow',
   },
 };
 
 export const Header = () => {
-  const { displayName } = useSelector(state => state.auth.user);
-
+  const { displayName, photoURL } = useSelector(state => state.auth.user);
+  
   return (
     <div style={styles.header}>
       <div style={styles.logoContainer}>
         <img src={logoApp} alt="App Logo" />
         <h3 style={styles.appName}>IshachuHuyachy</h3>
       </div>
-
-      <div style={styles.userInfo}>
-        <div style={styles.avatar}></div>
-        <div>{displayName}</div>
+      <div style={{display:'flex', flexDirection:'row', gap:'20px', alignItems:'center'}}>
+        <NavBarLk/>
+        <Balance/>
+        <Logout/>
       </div>
+
+
     </div>
   );
 };

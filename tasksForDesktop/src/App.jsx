@@ -12,6 +12,7 @@ import { Shop } from './pages/Shop'
 import { NavBar } from './components/NavBar'
 import { Header } from './components/Header'
 import { MainLayer } from './components/MainLayer'
+import { Tasks } from './pages/Tasks'
 
 function App() {
   const {user} = useSelector(state=>state.auth)
@@ -20,6 +21,7 @@ function App() {
       <Route path='/' element={user?<MainLayer/>:<Navigate to={'/login'}/>}>
         <Route path="/home" index element={user?<Home />:<Navigate to={'/login'}/>}/>
         <Route path='/shop' element={user?<Shop/>:<Login/>}/>
+        <Route path='/tasks' element={user?<Tasks/>:<Login/>}/>
         <Route path='/calendar' element={user?<Shop/>:<Login/>}/>
         <Route path='/*' element={<div>Страница не найдена</div>}/>  
       </Route>

@@ -1,0 +1,72 @@
+/* ShopItem.module.css */
+.container {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    /* padding: 16px; */
+    /* border: 1px solid #80808040; */
+  }
+  .container:hover{
+    background-color: rgba(250, 235, 215, 0.288);
+  }
+  .imageContainer {
+    width: 180px;
+    display: flex;
+    object-fit:contain;
+    flex-direction: column;
+    align-items: center;
+    height: 170px;
+    padding: 5px;
+    border-radius: 10px;
+        border: 1px solid #80808040;
+
+  }
+  
+  .image {
+    width: inherit;
+    height: inherit;
+    border-radius: 8px;
+  }
+  
+  .priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .priceText {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    color: #a14e51;
+  }
+  
+  .buyIcon {
+    width: 30px;
+  }
+  .buyIcon:hover{
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.2s;
+
+  }
+  @keyframes focusItem {
+    
+  }
+  
+  .productName {
+    text-align: left;
+    font-size: 13px;
+    display: box;
+    font-weight: 500;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    max-height: 2.5em;
+  }
