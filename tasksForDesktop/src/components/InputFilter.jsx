@@ -5,6 +5,7 @@ export const InputFilter = ({ inputValue, setInputValue, placeholder }) =>{
     const [value, setValue] = useState('')
 
     const [count, setCount] = useState(0)
+    
     useEffect(()=>{
         
         const interval = setInterval(() => {

@@ -1,9 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../features/auth/authSlice";
-import exitIcon from '../assets/exit.svg';
-import logoutIcon from '../assets/logoutIcon.svg'
-import logoApp from '../assets/logoApp.svg';
-import {NavBarLk} from './NavBarLk'
+import { useSelector } from "react-redux";
+import logoApp from '../../assets/logoApp.svg';
+import { NavBarLk } from "../NavBarLk";
 import { Logout } from "./Logout";
 import { Balance } from "./Balance";
 // Выносим стили в отдельный объект

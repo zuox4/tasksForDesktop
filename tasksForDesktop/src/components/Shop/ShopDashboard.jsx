@@ -1,5 +1,5 @@
 import { ShopItem } from "./ShopItem"
-import {ModalWindow} from "../ModalWindow.jsx";
+import styles from './ShopItem.module.css'
 import { InputFilter } from "../InputFilter.jsx";
 import { useEffect, useState } from "react";
 
@@ -29,10 +29,13 @@ export const ShopDashboard = () =>{
     },[inputValue])
 
     return(
-        <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-between', rowGap:'40px', columnGap:'30px'}}>
-            <InputFilter inputValue={inputValue} setInputValue={setInputValue} placeholder={'Введите название товара...'}/>
-            {filteredList.map((e)=><ShopItem item={e}/>)}
+        <>
+        <InputFilter inputValue={inputValue} setInputValue={setInputValue} placeholder={'Введите название товара...'}/>
+
+        <div className={styles.shopdashboard}>
+            {filteredList.map((e)=><ShopItem key={e.id} item={e}/>)}
 
         </div>
+        </>
     )
 }

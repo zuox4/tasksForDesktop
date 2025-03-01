@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
-import logoutIcon from '../assets/logoutIcon.svg'
-import { logout } from '../features/auth/authSlice'
+import logoutIcon from '../../assets/logoutIcon.svg'
+import { logout } from '../../features/auth/authSlice'
 export const Logout = () =>{
     const dispatch = useDispatch()
     return(

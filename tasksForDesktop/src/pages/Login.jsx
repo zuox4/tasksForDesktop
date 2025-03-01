@@ -31,14 +31,14 @@ const Login = () => {
     };
 
     return (
-        <div className='login' style={{display:'flex', flexDirection:'row', gap:'10px'}}>
-            <LeftContent/>
-            <div style={{height:'95vh', width:'4px', background:'#ededed'}}></div>
-            <LoginForm handleLogin={handleLogin}/>
-            {/* {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
-            <button onClick={handleLogin}>Login with Google</button> */}
-        </div>
+            <div className='login' style={{display:'flex', flexDirection:'row', gap:'10px'}}>
+                <LeftContent/>
+                <div style={{height:'95vh', width:'4px', background:'#ededed'}}></div>
+                <LoginForm handleLogin={handleLogin}/>
+                {/* {loading && <p>Loading...</p>}
+                {error && <p>{error}</p>}
+                <button onClick={handleLogin}>Login with Google</button> */}
+            </div>
     );
 };
 

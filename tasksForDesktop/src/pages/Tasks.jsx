@@ -1,9 +1,9 @@
+import { useEffect } from 'react'
 import { DirectionMainConteiner } from '../components/Tasks/DitectionMainConteiner'
 import { TaskDashBoard } from '../components/Tasks/TaskDashBoard'
-import { TaskItem } from '../components/Tasks/TaskItem'
 import styles from './Pages.module.css'
-
 export const Tasks = () =>{
+
     return(
         <div className={styles.tasks} >
             

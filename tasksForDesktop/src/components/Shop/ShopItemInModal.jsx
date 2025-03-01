@@ -22,7 +22,6 @@ export const ShopItemInModal = ({buyItem, product, item}) =>{
                     style={{display:'flex', alignItems:'center', gap:'30px', marginTop:'20px'}} 
                     onClick={buyItem}>
                 <div style={{display:'flex', gap:'7px'}}>{!isPossible?`Заказать товар за ${item.price}`:`Не хватает ${Math.abs(value-item.price)}`}{<img style={{width:'55px', filter:isPossible&&'opacity(0.6)'}}src={KCoinLogo}/>}</div>{!isPossible&&<img style={{width:'30px',filter:isPossible&&'opacity(0.6)'}} src={buyIcon}/>}
-                
             </button>
             {isPossible&&<Link to={'/tasks'} style={{marginTop:'10px'}}>Перейти к выполнению заданий</Link>}
         </div>

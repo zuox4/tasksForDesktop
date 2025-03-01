@@ -4,7 +4,7 @@ import { Shop } from '../pages/Shop'
 import { useSelector } from 'react-redux'
 import { Link, Navigate, Outlet } from 'react-router'
 import Login from '../pages/Login'
-import { Header } from "./Header"
+import { Header } from "./Header/Header"
 import { NavBar } from "./NavBar"
 import { ModalWindow } from "./ModalWindow"
 

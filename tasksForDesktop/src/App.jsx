@@ -4,13 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './pages/Login'
 import { useSelector } from 'react-redux'
-import { Link, Navigate, Outlet } from 'react-router'
-import { Route, Routes, BrowserRouter } from "react-router-dom"
+import { Navigate } from 'react-router'
+import { Route, Routes } from "react-router-dom"
 
 import { Home } from './pages/Home'
 import { Shop } from './pages/Shop'
-import { NavBar } from './components/NavBar'
-import { Header } from './components/Header'
+
 import { MainLayer } from './components/MainLayer'
 import { Tasks } from './pages/Tasks'
 

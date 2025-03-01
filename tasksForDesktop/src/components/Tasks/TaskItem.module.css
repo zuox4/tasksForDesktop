@@ -2,8 +2,6 @@
     
     width: 100%;
     border: solid 1px gray;
-
-
     border-radius: 10px;
 }
 .hashtagsconteiner{
@@ -14,10 +12,20 @@
     color: gray;
     width: fit-content;
 }
+
+.hashtagsconteiner{
+    padding: 2px 10px;
+    background-color: rgb(201, 178, 136);
+    border-radius: 10px;
+    color: white;
+}
+
 .AdditionalInfo{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
+
 }
 
 .mainInfo{
@@ -28,3 +36,24 @@
 .mainInfo>h3{
     text-align: left;
 }
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .tasker{
+    padding: 2px 7px;
+    border-radius: 10px;
+    background-color: rgba(77, 66, 172, 0.534);
+    color: white;
+  }
+
+  .AdditionalInfoItem{
+    padding: 2px 10px;
+    background-color: rgba(162, 180, 112, 0.404);
+    border-radius: 10px;
+    color: black;
+    font-size: .3erm;
+  }
