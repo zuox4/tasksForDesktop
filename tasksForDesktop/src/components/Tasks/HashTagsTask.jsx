@@ -1,10 +1,11 @@
 import styles from './TaskItem.module.css'
-export const HashTagsTask = () =>{
+export const HashTagsTask = ({heashTags}) =>{
     return(
         <div className={styles.hashtagsconteiner}>
-            <span>#sdcsdcsd</span>
-            <span>#sdcsdcsd</span>
-            <span>#sdcsdcsd</span>
+            {
+                heashTags.map(tag=><span>#{tag}</span>)
+            }
+
         </div>
     )
 }

@@ -1,9 +1,9 @@
+import { MainPage } from "../components/MainPage/MainPage"
+
 export const Home = () =>{
     return(
 
-            <div className="">
-                Главная
-            </div>
+        <MainPage/>
 
     )
 }

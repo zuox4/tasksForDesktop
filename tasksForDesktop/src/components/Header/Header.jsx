@@ -47,7 +47,6 @@ export const Header = () => {
         <h3 style={styles.appName}>IshachuHuyachy</h3>
       </div>
       <div style={{display:'flex', flexDirection:'row', gap:'20px', alignItems:'center'}}>
-        <NavBarLk/>
         <Balance/>
         <Logout/>
       </div>
