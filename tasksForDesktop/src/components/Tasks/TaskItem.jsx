@@ -7,15 +7,24 @@ import confirmIcon from './icons/confirmIcon.svg'
 import styles from './TaskItem.module.css'
 import { InfoCategory } from './InfoCategory'
 import { DoButtonsConteiner } from './DoButtons'
-import { useSelector } from 'react-redux'
-import { useEffect } from 'react'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { ModalWindow } from '../ModalWindow'
+import {TaskModalItem} from './TaskModalItem'
 export const TaskItem = ({item}) =>{
+    const [isOpened, setIsOpened] = useState(false)
     const {openTasks} = useSelector(state => state.myTasks)
     useEffect(()=>{
         console.log(openTasks)
     },[])
     return(
+        <>
+            {isOpened && (
+            <ModalWindow setIsOpened={setIsOpened}>
+                <TaskModalItem item={item}/>
+            </ModalWindow>
+            )}
+
         <div className={styles.taskitemconteiner}>
             <div style={{margin:'10px'}} className=''>
                 <div className={styles.header}>
@@ -42,8 +51,8 @@ export const TaskItem = ({item}) =>{
 
                     </div>
                     <div style={{display:'flex', flexDirection:'column',justifyContent:'space-around', alignItems:'flex-end'}}>
-                        {openTasks.includes(item.id)&&<div style={{ fontWeight:'500', padding:'0 10px', background:'#ffd400', borderRadius:'10px'}}>Ожидает вашего выполнения</div>}
-                        {!openTasks.includes(item.id)&&<DoButtonsConteiner/>}
+                        {openTasks.includes(item.id)&&<div style={{ fontWeight:'500', padding:'0 10px', background:'rgb(255 212 0 / 32%)', borderRadius:'10px'}}>Ожидает вашего выполнения</div>}
+                        {!openTasks.includes(item.id)&&<DoButtonsConteiner setIsOpened={setIsOpened}/>}
                     </div>
                     
                 </div>
@@ -52,5 +61,7 @@ export const TaskItem = ({item}) =>{
             </div>
 
         </div>
+        </>
+        
     )
 }

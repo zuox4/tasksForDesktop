@@ -1,13 +1,18 @@
 .mainpage{
-    background-color: rgb(65, 115, 158);
+  
     height: 100%;
     width: 100%;
 }
 .infouserconteiner{
+    border-bottom: solid 1px gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     width: 100%;
 }
 .userInfo{
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     
@@ -58,5 +63,78 @@
 .gradName{
     font-weight: 400;
     color: gray;
-    font-size: 17px;
+    font-size: 20px;
+}
+
+.CardWithInfo{
+    box-shadow: 3px 4px 3px #dbdbdb;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:  rgb(239, 241, 255);
+    border-radius: 10px;
+}
+
+.CardWithInfo>img{
+    width: 35%;
+    margin-top: 5px;
+}
+
+.CardWithInfo>span{
+    line-height: 1;
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+    height: min-content;
+    margin-bottom: 5px;
+
+}
+
+.cards{
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.categories{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.CategoriesCard{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(239, 241, 255);
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    padding: 10px;
+    justify-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+    line-height: 1.2;
+    transition: background-color  .5s ease-in-out;
+
+    cursor: pointer;
+
+}
+
+.CategoriesCard>img{
+    width: 150px;
+    margin-bottom: 5px;
+}
+.CategoriesCard:hover{
+    transform: scale(1.03);
+    transition: transform,   .2s ease-in-out;
+    background-color: rgb(240, 235, 255);
 }

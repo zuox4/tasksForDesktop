@@ -26,7 +26,7 @@ export const ShopItem = ({ item }) => {
           <img src={item.url||product} alt="Товар" className={styles.image} />
         </div>
 
-        <div style={{ display: 'flex', width: '180px', marginTop: '10px', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', width: '100%', marginTop: '10px', justifyContent: 'space-between' }}>
           <div className={styles.priceContainer}>
             <span className={styles.priceText}>
               {item.price} <img style={{ width: '50px' }} src={KCoinsLogo} alt="KCoins" />
