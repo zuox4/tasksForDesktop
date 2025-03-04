@@ -2,16 +2,17 @@ import { useEffect, useState } from 'react'
 import buyIcon from '../../assets/buy3.svg'
 import { Link } from 'react-router'
 import KCoinLogo from '../../assets/KCoins.svg'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 export const ShopItemInModal = ({buyItem, product, item}) =>{
     const {value} = useSelector(state=>state.balance)
     const [isPossible, setIsPossible] = useState(false)
+    const dispatch = useDispatch()
     useEffect(()=>{
        setIsPossible(item.price>value)
        return ()=>{
         setIsPossible(false)}
     },[])
-    
+
     return(
         <div style={{display:'flex', width: '400px', flexDirection:'column', alignItems:'center', }}>
             <img style={{width:'350px',}} src={item.url||product}/>

@@ -40,7 +40,7 @@ export const TaskItem = ({item}) =>{
                         <div className={styles.mainInfo}>
                             <h2 style={{fontSize:'16px', margin:'0', textAlign:'left', textTransform:'uppercase', marginTop:'5px'}}>{item.title}</h2>
                             <span style={{textAlign:'left'}}>{item.description}</span>
-                            <div style={{width:'fit-content', textDecoration:'underline'}}>Развернуть</div>
+
                         </div>
 
                         <div className={styles.AdditionalInfo}>

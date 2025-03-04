@@ -3,6 +3,7 @@ import { TaskItem } from "./TaskItem"
 import { useDispatch, useSelector } from "react-redux"
 import {changefilterTaksValue} from '../../features/filterTask/filterTaskSlice'
 import { useEffect, useState } from "react";
+import sadIcon from '../../assets/sad.svg'
 const tasksData = [
     {
         id: 1,
@@ -84,9 +85,12 @@ export const TaskDashBoard = () =>{
 
             <div style={{display:"flex", flexDirection:'column', gap:'20px'}}>
                 {
-                    tasksFiltered.map((item)=>
+                    tasksFiltered.length>0?tasksFiltered.map((item)=>
                         <TaskItem item={item}/>
-                    )
+                    ):<div style={{fontWeight:'500', fontSize:"20px", display:'flex', flexDirection:'column', alignItems:'center'}}>
+                        Тут пока ничего нет
+                        <img src={sadIcon} alt="" style={{width:'100px', marginTop:"20px"}}/>
+                        </div>
                 }
             </div>
 

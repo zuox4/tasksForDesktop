@@ -5,12 +5,15 @@ import { ModalWindow } from '../ModalWindow';
 import { useEffect, useState } from 'react';
 import KCoinsLogo from '../../assets/KCoins.svg'
 import { ShopItemInModal } from './ShopItemInModal';
+import { useDispatch } from 'react-redux';
+import { decrement } from '../../features/balance/balanceSlice';
 export const ShopItem = ({ item }) => {
   const [isOpened, setIsOpened] = useState(false);
-
+  const dispatch = useDispatch()
   function buyItem() {
     alert('Покупка выполнена. Товар ' + item.id);
     setIsOpened(false);
+    dispatch(decrement(item.price))
   }
 
   return (

@@ -166,7 +166,9 @@
 
   button:disabled:hover{
     background-color: rgb(190, 190, 190);
+    
   }
   button:disabled{
     background-color: rgb(190, 190, 190);
+    cursor: no-drop;
   }

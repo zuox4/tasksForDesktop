@@ -1,0 +1,140 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .statsContainer {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .statCard {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-3px);
+  }
+  
+  .statValue {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin: 0.5rem 0 0;
+    font-weight: 600;
+  }
+  
+  .purchasesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .purchaseCard {
+    display: flex;
+    gap: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .purchaseCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .productInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .productTitle {
+    margin: 0 0 0.5rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+  }
+  
+  .productDescription {
+    color: #7f8c8d;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+  
+  .metaInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    color: #2ecc71;
+    font-weight: 600;
+  }
+  
+  .date {
+    color: #95a5a6;
+    font-size: 0.9rem;
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    color: #95a5a6;
+    font-size: 1.2rem;
+  }
+
+
+
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .statusPending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+  }
+  
+  .statusDelivered {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  .statusDefault {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #e9ecef;
+  }
