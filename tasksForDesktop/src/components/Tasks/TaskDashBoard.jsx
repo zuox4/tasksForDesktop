@@ -86,7 +86,7 @@ export const TaskDashBoard = () =>{
             <div style={{display:"flex", flexDirection:'column', gap:'20px'}}>
                 {
                     tasksFiltered.length>0?tasksFiltered.map((item)=>
-                        <TaskItem item={item}/>
+                        <TaskItem key={item.id} item={item}/>
                     ):<div style={{fontWeight:'500', fontSize:"20px", display:'flex', flexDirection:'column', alignItems:'center'}}>
                         Тут пока ничего нет
                         <img src={sadIcon} alt="" style={{width:'100px', marginTop:"20px"}}/>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './TaskModalItem.module.css'
 import firstIcon from './first.svg'
 import sferumIcon from '../../assets/sferum.svg'
@@ -7,9 +7,7 @@ export const TaskModalItem = ({ item }) => {
   if (!item) {
     return <div className={styles.noData}>Задача не найдена</div>;
   }
-  function handleClick () {
-    window.location.href = 'https://example.com';
-  };
+
   // Форматирование даты
   const formatDate = (dateString) => {
     const [day, month, year] = dateString.split('.');
