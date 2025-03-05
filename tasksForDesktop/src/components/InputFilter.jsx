@@ -31,7 +31,6 @@ export const InputFilter = ({ inputValue, setInputValue, placeholder }) =>{
                 {inputValue.length>0&&<img src={closeIcon} style={{width:'15px', height:'15px', marginRight:'10px'}} onClick={()=>setInputValue('')}/>}
                 {/* <div style={{background:'yellow', fontSize:'15px',width:'60px', height:'100%', padding:'0px 10px 0px', fontWeight:'600', borderRadius:'5px', display:'flex', alignItems:'center', justifyContent:'center'}} >Найти</div> */}
             </div>
-
         </div>
     )
 }

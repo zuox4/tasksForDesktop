@@ -12,7 +12,7 @@ export const NavBarLk = () =>{
 
             <Link to={'/my-tasks'} className={styles.itemConteiner}>
                 <img className={styles.image} src={myTaskIcon} alt=''/>  
-                <span>Мои задачи</span> 
+                <span>Мои задачи</span>
             </Link>
             
         </div>
