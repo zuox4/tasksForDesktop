@@ -3,7 +3,12 @@
     width: 100%;
     border: solid 1px rgba(197, 197, 197, 0.658);
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2sease;
 }
+  .taskitemconteiner:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 .hashtagsconteiner{
     display: flex;
     flex-direction: row;

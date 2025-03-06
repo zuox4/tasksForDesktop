@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px grey;
+  height: 60px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.appName {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.actionsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}

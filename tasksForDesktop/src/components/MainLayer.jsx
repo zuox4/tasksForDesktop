@@ -1,12 +1,9 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom"
-import { Home } from '../pages/Home'
-import { Shop } from '../pages/Shop'
 import { useSelector } from 'react-redux'
-import { Link, Navigate, Outlet } from 'react-router'
-import Login from '../pages/Login'
+import { Outlet } from 'react-router'
+
 import { Header } from "./Header/Header"
 import { NavBar } from "./NavBar"
-import { ModalWindow } from "./ModalWindow"
+
 
 
 
@@ -15,19 +12,13 @@ export const MainLayer =()=>{
 
     return(
         <div className="main-content">
-            
             <Header/>
             <div  style={{display:'flex', flexDirection:'row', marginTop:'20px', justifyContent:'space-between', gap:'30px'}}>
-            <NavBar/>
-
-            <div className={'page-content'} style={{width: '75%'}}>
-            
-                <Outlet/>
+                <NavBar/>
+                <div className={'page-content'} style={{width: '75%'}}>
+                    <Outlet/>
+                </div>
             </div>
-           
-            </div>
-            
-
       </div>
     )
 }

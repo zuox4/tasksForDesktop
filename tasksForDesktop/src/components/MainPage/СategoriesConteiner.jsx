@@ -14,11 +14,12 @@ import { changefilterTaksValue } from '../../features/filterTask/filterTaskSlice
 const CategoryCard = ({name, icon}) =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    function redirectToTasks(value){
 
+    function redirectToTasks(value){
         dispatch(changefilterTaksValue(value))
         navigate('/tasks')
     }
+    
     return(
         <div className={styles.CategoriesCard} onClick={()=>redirectToTasks(name)}>
             <img src={icon} alt="" />
@@ -26,9 +27,8 @@ const CategoryCard = ({name, icon}) =>{
         </div>
     )
 }
+
 export const Categories = () => {
-
-
     return(
         <div className={styles.categories} >
             <CategoryCard name={'Ушу'} icon={ushuIcon}/>
@@ -37,10 +37,7 @@ export const Categories = () => {
             <CategoryCard name={'Рокот'} icon={rokotIcon}/>
             <CategoryCard name={'Школьные дела'} icon={schooldealIcon}/>
             <CategoryCard name={'Медиа дети'} icon={mediachildrenIcon}/>
-            <CategoryCard name={'Двишение первых'} icon={statIcon}/>
-
-
-
+            <CategoryCard name={'Движение первых'} icon={statIcon}/>
         </div>
     )
 }

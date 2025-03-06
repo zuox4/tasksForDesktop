@@ -24,7 +24,6 @@ function App() {
         <Route path='/*' element={<div>Страница не найдена</div>}/>  
       </Route>
       <Route path='/login' element={!user?<Login/>:<div>Уже авторизован</div>}/>
-
     </Routes>
 
   );

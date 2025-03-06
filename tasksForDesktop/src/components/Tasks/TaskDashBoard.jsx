@@ -83,7 +83,7 @@ export const TaskDashBoard = () =>{
         <div className="taskDashBoard" style={{display:'flex', flexDirection:'column', gap:'20px'}}>
             <InputFilter inputValue ={value} setInputValue={change} placeholder={'Введите параметры поиска'}/>
 
-            <div style={{display:"flex", flexDirection:'column', gap:'20px'}}>
+            <div style={{display:"flex", flexDirection:'column', gap:'30px'}}>
                 {
                     tasksFiltered.length>0?tasksFiltered.map((item)=>
                         <TaskItem key={item.id} item={item}/>

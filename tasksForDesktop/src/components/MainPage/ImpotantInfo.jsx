@@ -1,5 +1,4 @@
 import styles from './MainPage.module.css'
-import kubokIcon from '../Tasks/icons/kubokIcon.svg'
 import { useSelector } from 'react-redux'
 export const ImpotantInfo = () =>{
     const {displayName} = useSelector(state=>state.auth.user)
