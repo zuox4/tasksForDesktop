@@ -10,6 +10,7 @@ import { Shop } from './pages/Shop'
 import { MainLayer } from './components/MainLayer'
 import { Tasks } from './pages/Tasks'
 import { MyPurchaseHistory } from './pages/MyPurchaseHistory'
+import { AdminPanel } from './pages/AdminPanel'
 
 function App() {
   const {user} = useSelector(state=>state.auth)
@@ -24,6 +25,9 @@ function App() {
         <Route path='/*' element={<div>Страница не найдена</div>}/>  
       </Route>
       <Route path='/login' element={!user?<Login/>:<div>Уже авторизован</div>}/>
+      <Route path='/admin' element={<AdminPanel/>}>
+        <Route path='shop' index element={<div>Магазин</div>}/>
+      </Route>
     </Routes>
 
   );

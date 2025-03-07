@@ -8,7 +8,9 @@ import first from '../Tasks/first.svg'
 import styles from './MainPage.module.css'
 import { PhotoUser } from './PhotoUser'
 import { Categories } from './СategoriesConteiner'
+
 export const MainPage = () =>{
+
     return(
         <div className={styles.mainpage}>
             <InfoUserConteiner>

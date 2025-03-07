@@ -19,7 +19,6 @@ const CategoryCard = ({name, icon}) =>{
         dispatch(changefilterTaksValue(value))
         navigate('/tasks')
     }
-    
     return(
         <div className={styles.CategoriesCard} onClick={()=>redirectToTasks(name)}>
             <img src={icon} alt="" />
