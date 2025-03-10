@@ -1,7 +1,7 @@
 import styles from './ShopItem.module.css'; // Импорт CSS-модуля
 import product from '../../assets/product.jpg';
 import buyIcon from '../../assets/buy3.svg'
-import { ModalWindow } from '../ModalWindow';
+
 import { useEffect, useState } from 'react';
 import KCoinsLogo from '../../assets/KCoins.svg'
 import { ShopItemInModal } from './ShopItemInModal';
@@ -18,11 +18,11 @@ export const ShopItem = ({ item }) => {
 
   return (
     <>
-      {isOpened && (
+      {/* {isOpened && (
         <ModalWindow setIsOpened={setIsOpened}>
           <ShopItemInModal buyItem={buyItem} product={product} item={item} />
         </ModalWindow>
-      )}
+      )} */}
 
       <div className={styles.container}>
         <div className={styles.imageContainer}>

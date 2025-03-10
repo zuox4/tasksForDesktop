@@ -8,11 +8,12 @@ import first from '../Tasks/first.svg'
 import styles from './MainPage.module.css'
 import { PhotoUser } from './PhotoUser'
 import { Categories } from './СategoriesConteiner'
-
+import { useSelector } from 'react-redux'
 export const MainPage = () =>{
-
+    const {user} = useSelector(state=>state.auth)
     return(
         <div className={styles.mainpage}>
+            {user&&<>
             <InfoUserConteiner>
                 <div className={styles.userInfo}>
                     <PhotoUser/>
@@ -24,6 +25,7 @@ export const MainPage = () =>{
                     <CardWithInfo icon={first} info={'УШУ'}/>
                 </div>
             </InfoUserConteiner>
+            </>}
             <div>
                 <Categories/>
             </div>

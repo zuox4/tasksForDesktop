@@ -9,7 +9,7 @@ import { InfoCategory } from './InfoCategory'
 import { DoButtonsConteiner } from './DoButtons'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
-import { ModalWindow } from '../ModalWindow'
+
 import {TaskModalItem} from './TaskModalItem'
 export const TaskItem = ({item}) =>{
 
@@ -22,11 +22,11 @@ export const TaskItem = ({item}) =>{
 
     return(
         <>
-            {isOpened && (
+            {/* {isOpened && (
             <ModalWindow setIsOpened={setIsOpened}>
                 <TaskModalItem item={item}/>
             </ModalWindow>
-            )}
+            )} */}
 
         <div className={styles.taskitemconteiner}>
             <div style={{margin:'15px'}} className=''>

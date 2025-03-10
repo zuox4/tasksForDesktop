@@ -3,7 +3,7 @@ import sferumIcon from '../../assets/sferum.svg'
 import doWorkIcon from './icons/start.svg'
 import infoIcon from './icons/infoButton.svg'
 import { useState } from 'react'
-import { ModalWindow } from '../ModalWindow'
+
 
 export const DoButtonsConteiner = ({setIsOpened}) =>{
 
