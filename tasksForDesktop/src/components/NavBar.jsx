@@ -14,13 +14,13 @@ export const NavBar = () =>{
     return(
         <div className="nav-bar" style={{background:'white', width:'min-content', display:'flex', flexDirection:'column', alignItems:'center'}}>
             
-            <NavBarButton path={'/home'} name={'Главная'} icon={homeIcon}/>
-            <NavBarButton path={'/tasks'} name={'Задания'} icon={tasksIcon}/>
-            <NavBarButton path={'/shop'} name={'Магазин'} icon={shopIcon}/>
-            <NavBarButton path={'/calendar'} name={'Календарь'} icon={calendarIcon}/>
+            <NavBarButton path={'/player/home'} name={'Главная'} icon={homeIcon}/>
+            <NavBarButton path={'/player/tasks'} name={'Задания'} icon={tasksIcon}/>
+            <NavBarButton path={'/player/shop'} name={'Магазин'} icon={shopIcon}/>
+            <NavBarButton path={'/player/calendar'} name={'Календарь'} icon={calendarIcon}/>
             {user&&<>
-                <NavBarButton path={'/mytasks'} name={'Мои задачи'} icon={myTaksIcon}/>
-                <NavBarButton path={'/orders'} name={'Покупки'} icon={ordersIcon}/>
+                <NavBarButton path={'mytasks'} name={'Мои задачи'} icon={myTaksIcon}/>
+                <NavBarButton path={'orders'} name={'Покупки'} icon={ordersIcon}/>
             </>}
 
 

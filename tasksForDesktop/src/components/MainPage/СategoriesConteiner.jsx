@@ -1,23 +1,19 @@
 import styles from './MainPage.module.css'
-import statIcon from '../Tasks/first.svg'
-import ushuIcon from '../../assets/ushu.svg'
-import classHelpIcon from '../../assets/classhelp.svg'
-import farRisonIcon from '../../assets/farRison.svg'
-import rokotIcon from '../../assets/rokot.svg'
-import schooldealIcon from '../../assets/schooldeals.svg'
-import mediachildrenIcon from '../../assets/mediachildren2.svg'
+
 import { useNavigate } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { changefilterTaksValue } from '../../features/filterTask/filterTaskSlice'
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { changeCurrentCategory } from '../../features/categories/categoriesSlice'
 
-
-const CategoryCard = ({name, icon}) =>{
+const CategoryCard = ({name, id, icon}) =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
-
     function redirectToTasks(value){
         dispatch(changefilterTaksValue(value))
-        navigate('/tasks')
+        navigate('/player/tasks')
+        dispatch(changeCurrentCategory(id-1))
     }
     return(
         <div className={styles.CategoriesCard} onClick={()=>redirectToTasks(name)}>
@@ -28,15 +24,16 @@ const CategoryCard = ({name, icon}) =>{
 }
 
 export const Categories = () => {
+const categories = useSelector((state) => state.categories.categories);
+  const status = useSelector((state) => state.categories.status);
+  const error = useSelector((state) => state.categories.error);
+    useEffect(()=>{
+
+    },[])
+
     return(
         <div className={styles.categories} >
-            <CategoryCard name={'Ушу'} icon={ushuIcon}/>
-            <CategoryCard name={'Классная помощь'} icon={classHelpIcon}/>
-            <CategoryCard name={'Дальние горизонты'} icon={farRisonIcon}/>
-            <CategoryCard name={'Рокот'} icon={rokotIcon}/>
-            <CategoryCard name={'Школьные дела'} icon={schooldealIcon}/>
-            <CategoryCard name={'Медиа дети'} icon={mediachildrenIcon}/>
-            <CategoryCard name={'Движение первых'} icon={statIcon}/>
+            {categories.map((cat)=><CategoryCard key={cat.category_id} id={cat.category_id} name={cat.title} icon={cat.url_icon}/>)}
         </div>
     )
 }

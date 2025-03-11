@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@reduxjs/toolkit": "^2.6.0",
     "axios": "^1.8.1",
     "firebase": "^11.4.0",
+    "handy-svg": "^1.0.8",
     "input-otp": "^1.4.2",
     "justd-icons": "^1.10.25",
+    "jwt-decode": "^4.0.0",
     "react": "^19.0.0",
     "react-aria-components": "^1.6.0",
     "react-dom": "^19.0.0",
