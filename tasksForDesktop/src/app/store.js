@@ -7,7 +7,7 @@ import modalReducer from '../features/modal/modalSlice'
 import categoriesReducer from '../features/categories/categoriesSlice'; // Убедитесь, что путь к вашему файлу корректный
 
 import userReduser from '../features/user/userSlice'
-
+import workerTasksReducer from '../features/workerTasks/workerTaksSlice'
 export default configureStore(
     {
         reducer:{ 
@@ -18,6 +18,7 @@ export default configureStore(
             modal: modalReducer,
             categories: categoriesReducer,
             user: userReduser,
+            workerTasks: workerTasksReducer
         },
     devTools: true // Убедитесь, что включено
     }

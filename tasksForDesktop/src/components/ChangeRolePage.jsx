@@ -7,7 +7,7 @@ import playerIcon from '../assets/worker.svg'
 import { setCurrentRole } from "../features/auth/authSlice"
 import { closeModal } from "../features/modal/modalSlice"
 
-const roleDict = { 'worker':{name:'Заказчик',icon: teacherIcon}, 
+const roleDict = { 'worker':{name:'Заказчик', icon: teacherIcon}, 
                     'player':{name:'Исполнитель', icon: playerIcon}, 
                     'admin':{name:'Администратор', icon: adminIcon}
                 }
@@ -16,7 +16,7 @@ const roleDict = { 'worker':{name:'Заказчик',icon: teacherIcon},
 const Role = ({ name })=>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    
+    const { currentRole } = useSelector(state=>state.auth)
     function changeRole(){
         dispatch(setCurrentRole(name))
         navigate(name+'/home')
@@ -24,10 +24,10 @@ const Role = ({ name })=>{
     }
     
     return(
-        <div className={styles.Role} onClick={changeRole}>
+        <button className={styles.Role} onClick={changeRole} disabled={(name===currentRole)&&true}>
             <img src={roleDict[name].icon} alt=""/>
             <span>{roleDict[name].name}</span>
-        </div>
+        </button>
     )
 }
 export const ChangeRolePage = () =>{

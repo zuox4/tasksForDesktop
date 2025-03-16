@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 import { useEffect } from "react"
-import { setCurrentRole } from "../../features/auth/authSlice"
+import { setCurrentRole } from "../../../features/auth/authSlice"
 import { Outlet } from "react-router"
 export const WorkerPanel = () =>{
     const dispatch = useDispatch()
@@ -8,7 +8,6 @@ export const WorkerPanel = () =>{
         dispatch(setCurrentRole('worker'))
     } ,[dispatch])
     return(
-        
         <Outlet/>
     )
 }

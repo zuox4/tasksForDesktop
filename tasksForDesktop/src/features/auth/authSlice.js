@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {jwtDecode} from 'jwt-decode';
 import api from '../../api/api';
-import { useNavigate } from 'react-router';
+
 
 const initialState = {
   user: null,
@@ -12,16 +12,19 @@ const initialState = {
 
 // Инициализация из localStorage
 const token = localStorage.getItem('token');
+
 if (token) {
   try {
     const decoded = jwtDecode(token);
+    const roles = decoded.roles.map(role=>role.name)
     initialState.user = {
       id: decoded.user_id,
-      roles: decoded.roles,
+      roles: roles,
       fullName: decoded.full_name,
-      email: decoded.email
+      email: decoded.sub
     };
-    initialState.currentRole = decoded.roles?.[0] || 'player';
+    
+    initialState.currentRole = roles?.[0] || {name:'player'};
   } catch (error) {
     localStorage.removeItem('token');
   }
@@ -36,17 +39,17 @@ const authSlice = createSlice({
       state.error = null;
     },
     loginSuccess(state, action) {
-      const { token, user } = action.payload;
+      const { token } = action.payload;
       const decoded = jwtDecode(token);
-      
       state.loading = false;
+      const roles = decoded.roles.map(role=>role.name)
       state.user = {
         id: decoded.user_id,
-        roles: decoded.roles,
+        roles: roles,
         fullName: decoded.full_name,
         email: decoded.sub
       };
-      state.currentRole = decoded.roles?.[0] || 'player';
+      state.currentRole = roles?.[0] || 'player';
       state.error = null;
       localStorage.setItem('token', token);
       

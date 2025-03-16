@@ -5,8 +5,6 @@ export const Tasks = () =>{
 
     return(
         <div className={styles.tasks} >
-            
-            
             <DirectionMainConteiner/>
             <h1 style={{fontSize:'20px', marginTop:'20px'}}>Задания</h1>
             <TaskDashBoard/>

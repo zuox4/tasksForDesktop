@@ -1,145 +1,138 @@
-.mainpage{
-  
-    height: 100%;
-    width: 100%;
+.mainpage {
+	height: 100%;
+	width: 100%;
 }
-.infouserconteiner{
-    border-bottom: solid 1px gray;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
+.infouserconteiner {
+	border-bottom: solid 1px gray;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
 }
-.userInfo{
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    
+.userInfo {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
 }
-.photoconteiner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
+.photoconteiner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
 }
-.photoconteiner>img{
-    width: 100px;
-    border-radius: 50%;
+.photoconteiner > img {
+	width: 100px;
+	border-radius: 50%;
 }
-.schoolRaiting{
-    display: flex;
-    flex-direction: row;
-    gap: '4px';
-    justify-content: flex-end;
-    font-weight: 100;
-
+.schoolRaiting {
+	display: flex;
+	flex-direction: row;
+	gap: '4px';
+	justify-content: flex-end;
+	font-weight: 100;
 }
-.impotantInfo{
-    font-weight: 500;
-    font-size: 20px;
-    gap: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 15px;
+.impotantInfo {
+	font-weight: 500;
+	font-size: 20px;
+	gap: 7px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 15px;
 }
-.schoolRaiting>span{
-    font-size: 15px;
-    background-color: rgb(214, 137, 64);
-    padding: 2px 15px;
-    border-radius: 10px;
-    color: white;
-    font-weight: 400;
-
+.schoolRaiting > span {
+	font-size: 15px;
+	background-color: rgb(214, 137, 64);
+	padding: 2px 15px;
+	border-radius: 10px;
+	color: white;
+	font-weight: 400;
 }
-.schoolRaiting>img{
-    width: 30px;
+.schoolRaiting > img {
+	width: 30px;
 }
-.userName{
-    text-transform: uppercase;
-    text-align: left;
+.userName {
+	text-transform: uppercase;
+	text-align: left;
 }
-.gradName{
-    font-weight: 400;
-    color: gray;
-    font-size: 20px;
+.gradName {
+	font-weight: 400;
+	color: gray;
+	font-size: 20px;
 }
 
-.CardWithInfo{
-    box-shadow: 3px 4px 3px #dbdbdb;
-    width: 100px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color:  rgb(239, 241, 255);
-    border-radius: 10px;
+.CardWithInfo {
+	box-shadow: 3px 4px 3px #dbdbdb;
+	width: 100px;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgb(239, 241, 255);
+	border-radius: 10px;
 }
 
-.CardWithInfo>img{
-    width: 35%;
-    margin-top: 5px;
+.CardWithInfo > img {
+	width: 35%;
+	margin-top: 5px;
 }
 
-.CardWithInfo>span{
-    line-height: 1;
-    color: black;
-    font-weight: 700;
-    font-size: 24px;
-    height: min-content;
-    margin-bottom: 5px;
-
+.CardWithInfo > span {
+	line-height: 1;
+	color: black;
+	font-weight: 700;
+	font-size: 24px;
+	height: min-content;
+	margin-bottom: 5px;
 }
 
-.cards{
-    margin-bottom: 20px;
+.cards {
+	margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
 }
 
-
-.categories{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    column-gap: 20px;
-    row-gap: 20px;
+.categories {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	column-gap: 20px;
+	row-gap: 20px;
 }
-.CategoriesCard{
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(239, 241, 255);
-    border-radius: 10px;
-    color: black;
-    font-weight: 700;
-    padding: 10px;
-    justify-items: center;
-    text-transform: uppercase;
-    justify-content: center;
-    line-height: 1.2;
-    transition: background-color  .5s ease-in-out;
+.CategoriesCard {
+	display: grid;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(239, 241, 255);
+	border-radius: 10px;
+	color: black;
+	font-weight: 700;
+	padding: 10px;
+	justify-items: center;
+	text-transform: uppercase;
+	justify-content: center;
+	line-height: 1.2;
+	transition: background-color 0.5s ease-in-out;
 
-    cursor: pointer;
-
+	cursor: pointer;
 }
 
-.CategoriesCard>img{
-    width: 150px;
-    margin-bottom: 5px;
+.CategoriesCard > img {
+	width: 150px;
+	margin-bottom: 5px;
 }
-.CategoriesCard:hover{
-    transform: scale(1.03);
-    transition: transform,   .2s ease-in-out;
-    background-color: rgb(240, 235, 255);
+.CategoriesCard:hover {
+	transform: scale(1.03);
+	transition: transform, 0.2s ease-in-out;
+	background-color: rgb(240, 235, 255);
 }
-.schoolRaiting>span{
-    text-transform: lowercase;
-    font-size: 17px;
+.schoolRaiting > span {
+	text-transform: lowercase;
+	font-size: 17px;
 }

@@ -30,14 +30,21 @@
     gap: 10px;
     padding: 6px;
     cursor: pointer;
+    border: none;
 }
 .Role>span{
     font-weight: 500;
 }
 .Role:hover{
-    transform: scale(1.1);
+    
+    background-color: rgb(241, 231, 255);
 }
-
+.Role:disabled{
+    cursor:default;
+}
+.Role:active{
+    outline: none;
+}
 .Role>img{
     width: 40px;
 }
