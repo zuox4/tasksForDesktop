@@ -1,25 +1,18 @@
-import {configureStore} from '@reduxjs/toolkit'
-import authReducer  from '../features/auth/authSlice'
+import { configureStore } from '@reduxjs/toolkit'
+import authReducer from '../features/auth/authSlice'
 import balanceReducer from '../features/balance/balanceSlice'
-import filterTaskReducer from '../features/filterTask/filterTaskSlice'
-import myTasks from '../features/myTasks/myTasksSlice'
 import modalReducer from '../features/modal/modalSlice'
-import categoriesReducer from '../features/categories/categoriesSlice'; // Убедитесь, что путь к вашему файлу корректный
-
 import userReduser from '../features/user/userSlice'
-import workerTasksReducer from '../features/workerTasks/workerTaksSlice'
-export default configureStore(
-    {
-        reducer:{ 
-            auth: authReducer,
-            balance: balanceReducer,
-            taskInput: filterTaskReducer,
-            myTasks: myTasks,
-            modal: modalReducer,
-            categories: categoriesReducer,
-            user: userReduser,
-            workerTasks: workerTasksReducer
-        },
-    devTools: true // Убедитесь, что включено
-    }
-)
+import previewShow from '../features/preview/previewSlice'
+import playerProfile from '../features/playerProfile/playerProfileSlice'
+export default configureStore({
+	reducer: {
+		auth: authReducer,
+		balance: balanceReducer,
+		modal: modalReducer,
+		user: userReduser,
+		preview: previewShow,
+		playerProfile: playerProfile,
+	},
+	devTools: true, // Убедитесь, что включено
+})

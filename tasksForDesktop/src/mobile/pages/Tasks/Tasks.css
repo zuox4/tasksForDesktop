@@ -1,0 +1,9 @@
+.fade-in-out {
+	transition: opacity 300ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.fade-in-out.hidden {
+	opacity: 0;
+	transform: translateX(-10px);
+	transition-delay: 100ms; /* Задержка для кнопки */
+}

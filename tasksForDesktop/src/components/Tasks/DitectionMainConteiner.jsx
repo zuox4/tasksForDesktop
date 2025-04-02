@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react'
 import photo from './first2.svg'
 import ArrowLeftIcon from './icons/arrow-left.svg'
 import { changefilterTaksValue } from '../../features/filterTask/filterTaskSlice'
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+
 export const DirectionMainConteiner = () => {
 	const { categories, categoryCurrent, status } = useSelector(
 		state => state.categories
@@ -19,7 +18,7 @@ export const DirectionMainConteiner = () => {
 				<button
 					onClick={() => categotyId > 0 && setCategoryId(prev => prev - 1)}
 				>
-					{categotyId > 0 && <ArrowBackIosIcon />}
+					{categotyId > 0 && <ArrowLeftIcon />}
 				</button>
 				<div className={styles.infoBlock}>
 					<div className={styles.leftside}>
@@ -51,7 +50,7 @@ export const DirectionMainConteiner = () => {
 						setCategoryId(prev => prev + 1)
 					}
 				>
-					{categotyId < categories.length - 1 && <ArrowForwardIosIcon />}
+					{categotyId < categories.length - 1 && <ArrowLeftIcon />}
 				</button>
 			</div>
 		)
